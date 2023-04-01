@@ -12,6 +12,7 @@ const menu = PageMenu();
 export const Login = () => {
   async function open() {
     console.log();
+
     intro(color.bgMagenta("<=-. Login .-=>"));
 
     const key = await text({
