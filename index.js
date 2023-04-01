@@ -1,5 +1,4 @@
 // Run `npm start` to start the demo
-import pkg from "node-emoji";
 
 import {
   intro,
@@ -18,7 +17,6 @@ import color from "picocolors";
 
 import { Login } from "./pages/login/index.js";
 
-const { get } = pkg;
 const login = Login();
 
 export async function main() {
