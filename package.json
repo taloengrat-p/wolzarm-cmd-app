@@ -1,0 +1,20 @@
+{
+  "name": "wolzarm-cmd-app",
+  "version": "1.0.0",
+  "description": "for create commandline application generate file",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "taloengrat.p",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.6.3",
+    "chokidar": "^3.5.3",
+    "csv-parser": "^3.0.0",
+    "node-emoji": "^1.11.0",
+    "picocolors": "^1.0.0"
+  }
+}
