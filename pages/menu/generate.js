@@ -98,7 +98,10 @@ export const Generate = () => {
             fs.mkdirSync(baseOutputPath);
           }
 
-          const stringGResult = `{ ${stringsConcat} }`;
+          const stringGResult = `${
+            fileType === "ts" ? "export StringsG" : ""
+          } { ${stringsConcat} }`;
+
           fs.writeFileSync(outputEN, JSON.stringify(enResults));
           fs.writeFileSync(outputTH, JSON.stringify(thResults));
           fs.writeFileSync(outputStringG, stringGResult);
