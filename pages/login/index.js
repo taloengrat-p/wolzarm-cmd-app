@@ -26,7 +26,7 @@ export const Login = () => {
     const s = spinner();
     s.start("Validating Key");
 
-    await sleep(1500);
+    await sleep(1000);
 
     if (key === "admin") {
       s.stop(color.green(`Key Verify Success ${get("white_check_mark")}`));

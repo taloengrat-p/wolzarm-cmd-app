@@ -13,7 +13,7 @@ export const PageMenu = () => {
 
     const GENERATE = { label: "Generate", value: "G" };
 
-    const menuOption = [GENERATE, BACK, EXIT];
+    const menuOption = [GENERATE, EXIT];
 
     const menus = await select({
       message: color.bgYellow("Select menu"),
@@ -44,10 +44,10 @@ export const PageMenu = () => {
   }
 
   async function generateLocaleOption() {
-    const Flutter = { label: "Flutter", value: "F" };
+    const Flutter = { label: "Flutter (not support yet)", value: "F" };
     const I18N = { label: "I18N package", value: "I18N" };
 
-    const menuOption = [Flutter, I18N];
+    const menuOption = [Flutter, I18N, BACK, EXIT];
 
     const menus = await select({
       message: "Template",
@@ -56,6 +56,8 @@ export const PageMenu = () => {
 
     if (menus === I18N.value) {
       generateFunc.onGenerateLocaleI18NLocale();
+    } else {
+      exitOrBack(menus);
     }
   }
 
